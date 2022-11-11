@@ -18,7 +18,10 @@ class OfficeManagementSystem {
     };
 
     peopleEnterRoom(room) { 
-        room.makeRoomUnavailable();
+        if (room.isRoomAvailable() === true) {
+            room.makeRoomUnavailable();
+        };
+        return 'This room is not available. You cannot enter.'
         
     };
 

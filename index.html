@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='css/styles.css' type='text/css' rel='stylesheet'>
+        <title>Office Management System</title>
+    </head>
+    
+    <body>
+        <h1>Office Management System</h1>
+        
+        <section>
+            <a href="all_rooms.html"><button id="show-all-meeting-rooms">Show All Meeting Rooms</button></a>
+        </section>
+        <br>
+        
+        <section>
+            <a href="all_available_rooms.html"><button id="show-all-available-meeting-rooms">Show Available Rooms Only</button></a>
+            
+        </section>
+        <br>
+        
+        <form>
+            <h2>Add a New Meeting Room:</h2>
+            <label for="meeting-room-name">Name of Meeting Room:</label>
+            <input type="text" id="meeting-room-name" name="meeting-room-name">
+            <input type="submit" value="Add Meeting Room">
+        </form>
+        
+
+    
+        <script src="src/officeManagementSystem.js"></script>
+        <script src="src/room.js"></script>
+        <script src="interface.js"></script> 
+    </body>
+</html>

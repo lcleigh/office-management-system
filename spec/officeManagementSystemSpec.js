@@ -73,5 +73,13 @@ describe('OfficeManagementSystem', () => {
         officeManagementSystem.peopleEnterRoom(room1);
         officeManagementSystem.peopleEnterRoom(room3);
         expect(officeManagementSystem.listAvailableRooms()).toEqual([room2, room4]);
-    })
+    });
+
+    it ('gives an error message if someone tries to enter a room that is not available', () => {
+        let room1 = new Room('The Penthouse');
+        officeManagementSystem.addMeetingRoom(room1);
+        officeManagementSystem.peopleEnterRoom(room1);
+        expect(room1.isRoomAvailable()).toBe(false);
+        expect(officeManagementSystem.peopleEnterRoom(room1)).toEqual('This room is not available. You cannot enter.')
+    });
 });
